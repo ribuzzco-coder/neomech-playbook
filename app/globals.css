@@ -1,25 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --rb-bg: #f7f4ed;
-  --rb-surface: #ffffff;
-  --rb-text: #171717;
-  --rb-muted: #6b6b6b;
-  --rb-primary: #111111;
-  --rb-accent: #ff5a1f;
-  --rb-secondary: #ebe6dc;
-  --rb-border: #ded8ce;
-  --rb-success: #1f9d55;
-  --rb-warning: #d99a00;
-  --rb-danger: #d64545;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Saira:wght@400;500;600;700&display=swap');
+
+@theme inline {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Saira', sans-serif;
+  --color-rb-bg: #0b0b10;
+  --color-rb-bgAlt: #12131a;
+  --color-rb-surface: #181a24;
+  --color-rb-surfaceAlt: #1d2130;
+  --color-rb-primary: #e625ff;
+  --color-rb-secondary: #0feffd;
+  --color-rb-accent: #5b16e6;
+  --color-rb-text: #f5f7fa;
+  --color-rb-textSecondary: #c7cbd6;
+  --color-rb-muted: #98a0b3;
+  --color-rb-border: rgba(255,255,255,0.08);
+  --color-rb-success: #1f9d55;
+  --color-rb-warning: #d99a00;
+  --color-rb-danger: #d64545;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--rb-bg);
-  color: var(--rb-text);
-  font-family: sans-serif;
+  font-family: 'Saira', sans-serif;
+  background: #0b0b10;
+  color: #f5f7fa;
+  text-rendering: optimizeLegibility;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(230, 37, 255, 0.24);
+  color: #f5f7fa;
 }
